@@ -1,0 +1,31 @@
+def crossover(popsize,parent1_pops, parent2_pops, pc):
+  child_pops =[ ]
+  for i in range(popsize):
+    # 初始化
+    child =[None]*len(parent1_pops[i])
+    parent1= parent1_pops[i]
+    parent2 = parent2_pops[i]
+    if random.random()>= pc:
+      child = parent1.copy()# 随机生成一个(或者随机保留父代中的一个)
+      random.shuffle(child)
+    else:
+      # parent1
+      start_pos =random.randint(0，len(parent1)-1
+      end_pos =random.randint(0，len(parent1)-1)
+      if start pos >end pos:
+        tem pop = start pos
+        start_pos = end pos
+        end_pos=tem_pop
+      child[start_pos:end_pos + 1]= parentl[start_pos:end_pos + 1].copy()
+      #parent2 -> child
+      list1 =list(range(end pos +1,len(parent2)))
+      list2 =list(range(0,start_pos))
+      List index = list1 + list2
+      j= -1
+      for i in list index:
+        for j in range(j + 1,len(parent2)):
+          if parent2[jl not in child:
+            childli]= parent2[j]
+            break
+    child_pops.append(child)
+return child pops
