@@ -1,0 +1,22 @@
+CityNum =20 # 城市数量
+MinCoordinate=0  #二维坐标最小值
+MaxCoordinate =101 #二维坐标最大值
+# GA参数
+generation =100popsize = 100 # 选代次数
+tournament_size=5  #锦标赛小组大小
+pc = 0.95 #交叉概率
+pm = 0.1  #变异概率
+CityCoordinates = \
+  [(random,randint(Mincoordinate , Maxcoordinate), random,randint(Mincoordinate, Maxcoordinate)) for i in range(cityNum)]
+# 计算城市之间的距离
+dis_matrix = \
+  pd.DataFrame(data=None,columns=range(len(cityCoordinates)),index=range(len(citycoordinates)))
+for i in range(len(cityCoordinates)):
+  xi,yi = cityCoordinates[i][0],cityCoordinates[i][1]
+  for j in range(len(cityCoordinates)):
+    xj,yi= citycoordinates[j][0],cityCoordinates[j][1]
+    dis_matrix,iloc[i,j]= round(math.sqrt((xi-xj)**2+(yi- yj)** 2)，2)
+iteration = 0
+# 初始化，随机构造
+pops = \
+  [random,sample(li for i in list(range(len(cityCoordinates)))], len(cityCoordinates)) for j in range(popsize)]
