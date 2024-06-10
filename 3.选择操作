@@ -1,0 +1,17 @@
+  #联赛选择算子
+def tournament select(pops popsize fits,tournament_size):
+  new_pops,new_fits =][]
+# 步骤1 从群体中随机选择个个体，计算每个个体的目标函数值
+  while len(new pops)<len(pops):
+  tournament list = random.sample(range(0,popsize),tournament_size)
+  tournament fit = fitslil for i in tournament list]
+  #转化为df方便索引
+  Tournament_df=pd.DataFrame\
+    ([tournamentlist,tournament_fitl),transpose(),sort_values(by=1).reset_index(drop=True)
+# 步骤2根据每个个体的目标函数值，计算其适应度
+  fit = tournament df.iloc[,1]
+  pop = pops[int(tournament_df.iloc[0,0])]
+# 步骤3 选择适应度最大的个体
+  new pops.append(pop
+  new _fits.append(fit)
+return new_pops,new_fits
