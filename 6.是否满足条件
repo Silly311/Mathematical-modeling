@@ -1,0 +1,11 @@
+while iteration <= generation:
+# 锦标赛赛选择
+  pop1, fits1 = tournament_select(pops, popsize, fits, tournament_size
+  pop2, fits2 =tournament_select(pops, popsize, fits, tournament_size
+# 交叉
+  child pops =crossover(popsize,pop1,pop2,pc)
+# 变异
+  child _pops =mutate(child_pops, pm)
+# 计算子代适应度
+  child fits =[None]* popsizefor i in range(popsize):
+  child fits[il=calFitness(child popslil, dis matrix)
