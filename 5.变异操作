@@ -1,0 +1,20 @@
+def mutate(pops,pm):
+  pops_mutate =[]
+  for i in range(len(pops)):
+    pop = pops[i].copy()
+# 随机多次成对变异
+# 随机选出两个位置进行交换
+    t=random.randint(1，5)
+    count = 0
+    while count <t:
+      if random.random() < pm:
+        mut_pos1=random.randint(0,len(pop)-1)
+        mut_pos2 =random.randint(0,len(pop)-1)
+#如果不相等则进行取反的操作，这里使用交换
+        if mut_pos1 != mut_pos2:
+        tem = pop[mut_pos1]
+        pop[mut_pos1l= pop[mut_pos2]
+        pop[mut_pos2]= tem
+        pops_mutate.append(pop)
+        count += 1
+        return pops_mutate
