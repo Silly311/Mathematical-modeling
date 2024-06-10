@@ -1,0 +1,26 @@
+# 适应度的计算
+def calFitness(line,dis_matrix):
+# 贪婪策略得到距离矩阵(解码过程)
+# 计算路径距离(评价函数)
+dis_sum =0# 路线距离
+dis = 0
+for i in range(len(line)):
+  if i<len(line)- 1:
+    # 依次计录一个数以及下一个数的距离，存入城市间的距离矩阵
+    dis = dis_matrix.loc[linelil, line[i + 1]]
+    dis_sum = dis_sum + dis
+else:
+  # 最后一个数，无下一个数的情况
+  dis = dis_matrix.loc[line[i], line[0]]dis _sum = dis_sum + dis
+#返回城市间的路线距离矩阵
+return round(dis_sum,1)
+  #计算适应度
+fits = [None]* popsize
+for i in range(popsize)：
+  fits[i]= calFitness(popsli], dis_matrix)
+# 保留当前最优,最小的fits为最优解
+best_fit = min(fits)
+best_pop = pops[fits.index(best_fit)]
+print('初代最优值 %.1f'%(best_fit))
+best fit_list = []
+best_fit_list.append(best_fit)
